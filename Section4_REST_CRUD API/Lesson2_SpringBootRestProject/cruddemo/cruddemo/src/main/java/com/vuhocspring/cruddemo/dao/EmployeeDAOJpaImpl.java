@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+// Sử dụng JpaReponsitory thì không cần triển khai class Impl này nữa
 @Repository
 public class EmployeeDAOJpaImpl implements EmployeeDAO{
 
