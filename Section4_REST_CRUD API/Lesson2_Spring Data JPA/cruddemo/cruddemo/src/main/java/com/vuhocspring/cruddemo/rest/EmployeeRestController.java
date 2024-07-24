@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// Tương tự như trong JpaRepository chúng ta cos thể tạo nhiều API liên quan đến các Entity mà không cần cài đặt chi tiết từng cái
 @RestController
 @RequestMapping("/api")
 public class EmployeeRestController {
