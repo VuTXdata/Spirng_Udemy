@@ -33,7 +33,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/MyLearn/Improve/IT/Spring/Spirng_Udemy/Section5_RestAPISecurity/00-spring-boot-rest-security-employee-starter-code/00-spring-boot-rest-security-employee-starter-code",
+    "last_opened_file_path": "E:/MyLearn/Improve/IT/Spring/Spirng_Udemy/Section5_RestAPISecurity/Bonus/bonus-code-spring-boot-rest-security-jpa-hibernate-bcrypt/bonus-code-spring-boot-rest-security-jpa-hibernate-bcrypt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,6 +70,7 @@
       <updated>1722006708017</updated>
       <workItem from="1722006710561" duration="63000" />
       <workItem from="1722007042384" duration="769000" />
+      <workItem from="1722088452075" duration="131000" />
     </task>
     <servers />
   </component>
