@@ -12,4 +12,10 @@ public class DemoController {
         model.addAttribute("theDate", LocalDateTime.now());
         return "helloword";
     }
+
+    @GetMapping("/homepage")
+    public String homepage(Model model){
+        model.addAttribute("theTime", LocalDateTime.now().getHour());
+        return "homepage";
+    }
 }

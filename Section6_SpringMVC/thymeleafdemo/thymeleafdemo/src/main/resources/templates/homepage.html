@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>TranXuanVu</title>
+    <link rel="stylesheet" th:href="@{/css/demo.css}">
+</head>
+<body class="body_bgr">
+    <h1 style="text-align: center; color: darkred">WELLCOME TO MY PAGE</h1>
+    <p>Your name: <span th:text="${param.stdName}"></span></p>
+    <p>Message: <span th:text="${mesage}"></span></p>
+</body>
+</html>
