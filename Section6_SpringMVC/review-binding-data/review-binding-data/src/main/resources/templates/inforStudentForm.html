@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<form th:action="@{/processStudentForm}" method="post" th:object="${student}">
+    <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" th:field="*{firstName}" id="firstName">
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" th:field="*{lastName}" id="lastName">
+    </div>
+    <div class="form-group">
+        <label for="country">Country:</label>
+        <select th:field="*{country}" id="country">
+            <option th:each="tem1 : ${countries}" th:value="${tem1}" th:text="${tem1}"></option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Favorite Language Programming:</label>
+        <input type="radio" th:field="*{favoriteLanguages}"
+               th:each="tem2 : ${favorLanguages}" th:value="${tem2}" th:text="${tem2}">
+    </div>
+    <div class="form-group">
+        <label>Operating System:</label>
+        <input type="checkbox" th:field="*{operatingSystem}"
+               th:each="tem3 : ${operatingSystems}" th:value="${tem3}" th:text="${tem3}">
+    </div>
+    <input type="submit" th:value="SEND">
+</form>
+</body>
+</html>
