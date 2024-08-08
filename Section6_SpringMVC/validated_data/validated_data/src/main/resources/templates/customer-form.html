@@ -13,15 +13,22 @@
 <body>
 <h3 style="color: red">Information Customer Form</h3>
 <form th:action="@{/processForm}" method="post" th:object="${customer}">
-    Firstname: <input type="text" th:field="*{firstName}"><br>
+    Firstname: <input type="text" th:field="*{firstName}"><br><br>
     Lastname (*) : <input type="text" th:field="*{lastName}">
-
-
     <span th:if="${#fields.hasErrors('lastName')}"
           th:errors="*{lastName}"
           class="error"></span>
     <br><br>
-
+    Count: <input type="text" th:field="*{count}">
+    <span th:if="${#fields.hasErrors('count')}"
+          th:errors="*{count}"
+          class="error"></span>
+    <br><br>
+    Course code: <input type="text" th:field="*{courseCode}">
+    <span th:if="${#fields.hasErrors('courseCode')}"
+          th:errors="*{courseCode}"
+          class="error"></span>
+    <br><br>
     <input type="submit" th:value="SEND">
 </form>
 </body>
