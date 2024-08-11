@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Information Employee</title>
+    <link rel="stylesheet" href="@{/css/cssEmployee.css}">
+</head>
+<body>
+<span class="form">
+    <h3>CONFIRM INFORMATION EMPLOYEE</h3>
+    <span class="container">
+        First name: <span th:text="${employee.firstName}"></span><br><br>
+        Laste name: <span th:text="${employee.lastName}"></span><br><br>
+        Age: <span th:text="${employee.age}"></span><br><br>
+        Chuc vu: <span th:text="${employee.chucVu}"></span><br><br>
+        Loai cong viec: <span th:text="${employee.loaiCv}"></span><br><br>
+    </span>
+</span>
+
+</body>
+</html>
