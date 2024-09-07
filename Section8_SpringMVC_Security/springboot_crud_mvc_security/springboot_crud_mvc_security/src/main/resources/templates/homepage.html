@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                     xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <style>
+        a{
+            color: blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Demo security</title>
+</head>
+<body>
+    <h3>Welcome to my page!!!</h3>
+    <h1>Tran Xuan Vu</h1>
+    <hr>
+    <p>
+        User: <span sec:authentication="principal.username"></span>
+        <br><br>
+        Role: <span sec:authentication="principal.authorities"></span>
+        <br><br>
+    </p>
+    <div sec:authorize="hasRole('MANAGER')">
+        <p>
+            <a th:href="@{/leader}">Page leader</a>
+        </p>
+    </div>
+    <div sec:authorize="hasRole('ADMIN')">
+        <p>
+            <a th:href="@{/system}">Page admin</a>
+        </p>
+    </div>
+    <form action="#" th:action="@{/logout}" method="post">
+        <input type="submit" value="LOGOUT" style="background-color: darkgreen">
+    </form>
+</body>
+</html>
